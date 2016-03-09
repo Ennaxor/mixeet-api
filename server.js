@@ -8,7 +8,8 @@ var configDB = require('./config/database.js');
 //MONGODB & MONGOOSE
 var mongoose = require('mongoose');
 //mongoose.connect(configDB.url);
-mongoose.connect('mongodb://localhost/mixeetdb');
+mongoose.connect(process.env.DB);
+//mongoose.connect('mongodb://localhost/mixeetdb');
 
 /*DEFINE LA CARPETA DESDE LA CUAL SE SIRVEN ARCHIVOS ESTATICOS (CSS, JS, IMGS, etc...)
 var static = express();
