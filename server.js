@@ -7,14 +7,7 @@ var configDB = require('./config/database.js');
 
 //MONGODB & MONGOOSE
 var mongoose = require('mongoose');
-//mongoose.connect(configDB.url);
 mongoose.connect(process.env.DB);
-//mongoose.connect('mongodb://localhost/mixeetdb');
-
-/*DEFINE LA CARPETA DESDE LA CUAL SE SIRVEN ARCHIVOS ESTATICOS (CSS, JS, IMGS, etc...)
-var static = express();
-app.use('/static', static);
-static.use(express.static('public')); */
 
 app.use(require('cookie-parser')());
 app.use(require('body-parser').json());
