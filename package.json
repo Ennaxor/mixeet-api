@@ -1,0 +1,20 @@
+{
+  "name": "mixeet",
+  "version": "0.0.0",
+  "description": "music app great for parties",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Roxanne Lopez van Dooren",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "googleapis": "^2.1.6",
+    "mongoose": "^4.2.8"
+  }
+}
