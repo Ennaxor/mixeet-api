@@ -12,9 +12,6 @@ module.exports = function(app) {
 		res.json({msg:'Funcionando...'});
 	})
 	
-	app.get('*', function(req, res){
-		res.redirect('/');
-	});
 
 	//USERS
 	app.use('/users', users);
