@@ -24,7 +24,7 @@ module.exports = {
 		  		access_type: 'online',
 		  		scope: scopes
 		  	});
-		  	
+
 		  	res.redirect(url);
 		}else{
 			oauth2Client.getToken(req.query.code, function(err, tokens){
@@ -45,7 +45,7 @@ module.exports = {
 								return;
 							} 
 							else{
-								res.redirect('/landing?token='+token);								
+								res.redirect('https://mixeet.herokuapp.com/landing?token='+token);								
 							}
 						});
 
