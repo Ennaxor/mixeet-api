@@ -6,7 +6,7 @@ var google = require('googleapis');
 var OAuth2 = google.auth.OAuth2;
 
 /* RECUPERAMOS CREDENCIALES DE NUESTRA CONSOLA DEVELOPER */
-var oauth2Client = new OAuth2('927674196118-l6i2kvibbp67g63hf0unvcu40552cntq.apps.googleusercontent.com', '49tddGVHoBgsf_rQ1ETgJlLg', 'http://localhost:3000/users/signin');
+var oauth2Client = new OAuth2('927674196118-l6i2kvibbp67g63hf0unvcu40552cntq.apps.googleusercontent.com', '49tddGVHoBgsf_rQ1ETgJlLg', 'https://mixeet.herokuapp.com/users/signin');
 
 //var googleRedirect = process.env.GOOGLE_REDIRECT || config.googleRedirect;
 
@@ -24,7 +24,7 @@ module.exports = {
 		  		access_type: 'online',
 		  		scope: scopes
 		  	});
-
+		  	
 		  	res.redirect(url);
 		}else{
 			oauth2Client.getToken(req.query.code, function(err, tokens){
