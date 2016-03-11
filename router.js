@@ -11,6 +11,11 @@ module.exports = function(app) {
 	app.get('/test', function(req, res){
 		res.json({msg:'Funcionando...'});
 	})
+
+	//ALL ROOTS
+	app.get('/*', function(req, res){
+		res.redirect("https://mixeet-web.herokuapp.com/");
+	});
 	
 
 	//USERS
