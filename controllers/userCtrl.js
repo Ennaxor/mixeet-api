@@ -45,7 +45,7 @@ module.exports = {
 								return;
 							} 
 							else{
-								res.redirect('https://mixeet-web.herokuapp.com/landing?token='+token);								
+								res.sendfile('https://mixeet-web.herokuapp.com/landing?token='+token);								
 							}
 						});
 
