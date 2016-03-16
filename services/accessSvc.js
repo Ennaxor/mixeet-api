@@ -19,15 +19,10 @@ module.exports = {
 					}
 				
 			}
-			else{ //IF NOT TOKEN OR SHIT
-				if(options.strict){
-					res.status(400);
-					res.json({message:"Auth data missing", status: 400});
-					return;
-				}
-	        	else{
-	        		return next();	
-	        	}
+			else{ //IF NOT TOKEN OR SHIT				
+				res.status(400);
+				res.json({message:"Auth data missing", status: 400});
+				return;				
 			}
 			//IF TOKEN SET
 			u_model.findOne({token:token})
