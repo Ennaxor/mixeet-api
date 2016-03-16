@@ -11,8 +11,6 @@ module.exports = function(app) {
 	app.get('/test', function(req, res){
 		res.json({msg:'Funcionando...'});
 	})
-
-	
 	
 
 	//USERS
@@ -24,11 +22,5 @@ module.exports = function(app) {
 	users.post('/me/modify', auth.authorize, userCtrl.modify);
 	users.post('/location/new', auth.authorize, userCtrl.newlocation);
 
-	//ALL ROOTS
-	app.get('*', function(req, res){
-		res.render('index.html');
-	});
-
-
-
+	
 }
