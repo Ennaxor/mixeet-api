@@ -77,8 +77,9 @@ module.exports = {
 			next();
 		})	
 	},
-	me: function(req, res, next){
-		res.json({email:req.user.email, name:req.user.name, image:req.user.image, location:req.user.location});
+	me: function(req, res){
+		res.json({msg:"show"});
+		//res.json({email:req.user.email, name:req.user.name, image:req.user.image, location:req.user.location});
 	},
 	modify: function(req, res){
 		req.user.name = req.body.name;
