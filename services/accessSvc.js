@@ -3,7 +3,7 @@ var User = require('../models/user');
 module.exports = {
 	authorize: function(){
 		return function(req, res, next){
-			var u_model = User.model;
+			var u_model = User.user;
 			var bearerHeader = req.headers["authorization"];
 			var token = "";
 			if(req.params.access_token){
