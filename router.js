@@ -14,7 +14,7 @@ module.exports = function(app) {
 	
 
 	//USERS
-	app.use('/#/users', users);
+	app.use('/users', users);
 
 	users.get('/signin', userCtrl.signin);
 	users.get('/me', auth.authorize, userCtrl.me);
