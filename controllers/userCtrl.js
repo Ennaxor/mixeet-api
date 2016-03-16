@@ -78,7 +78,7 @@ module.exports = {
 		})	
 	},
 	me: function(req, res, next){
-		return res.json({email:req.user.email, name:req.user.name, image:req.user.image, location:req.user.location});
+		res.json({email:req.user.email, name:req.user.name, image:req.user.image, location:req.user.location});
 	},
 	modify: function(req, res){
 		req.user.name = req.body.name;
