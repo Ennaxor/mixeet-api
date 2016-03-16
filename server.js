@@ -14,6 +14,10 @@ app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
+/*app.use(function(req, res) {
+	res.sendFile(__dirname + '/public/index.html');
+});
+*/
 
 // routes ======================================================================
 require('./router.js')(app); // load our routes and pass in our app and fully configured passport

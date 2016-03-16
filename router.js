@@ -12,6 +12,8 @@ module.exports = function(app) {
 		res.json({msg:'Funcionando...'});
 	})
 
+	
+	
 
 	//USERS
 	app.use('/users', users);
@@ -21,6 +23,11 @@ module.exports = function(app) {
 	users.get('/:email', userCtrl.info);
 	users.post('/me/modify', auth.authorize, userCtrl.modify);
 	users.post('/location/new', auth.authorize, userCtrl.newlocation);
+
+	//ALL ROOTS
+	app.get('*', function(req, res){
+		res.sendFile('/public/index.html');
+	});
 
 
 
