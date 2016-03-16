@@ -26,7 +26,7 @@ module.exports = function(app) {
 
 	//ALL ROOTS
 	app.get('*', function(req, res){
-		res.sendFile('/public/index.html');
+		res.render('index.html');
 	});
 
 
