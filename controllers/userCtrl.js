@@ -77,7 +77,7 @@ module.exports = {
 			next();
 		})	
 	},
-	me: function(req, res){
+	me: function(req, res, next){
 		res.json({email:req.user.email, name:req.user.name, image:req.user.image, location:req.user.location});
 	},
 	modify: function(req, res){
