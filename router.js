@@ -14,10 +14,10 @@ module.exports = function(app) {
 	
 
 	//USERS
-	app.use('/users', users);
+	app.use('/#/users', users);
 
 	users.get('/signin', userCtrl.signin);
-	users.get('/me', userCtrl.me);
+	users.get('/me', auth.authorize, userCtrl.me);
 	users.get('/:email', userCtrl.info);
 	users.post('/me/modify', auth.authorize, userCtrl.modify);
 	users.post('/location/new', auth.authorize, userCtrl.newlocation);
